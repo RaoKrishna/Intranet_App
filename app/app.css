@@ -28,3 +28,42 @@
   content: "";
   padding: 0;
 }
+
+#mainblock {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 1%;
+}
+
+.well ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.well ul li {
+  float: left;
+  border: 1px solid #000;
+  border-bottom-width: 0;
+  margin: 3px 3px 0px 0.1px;
+  padding: 5px 5px 0px 5px;
+  background-color: #CCC;
+  border-color: darkgray;
+  color: #696969;
+  cursor: pointer;
+}
+
+#productPlane {
+  border: 1px solid darkgray;
+  clear: both;
+  padding: 0 1em;
+}
+
+.well .active {
+  background-color: #FFF;
+  color: #000;
+}
+
+#prodView {
+  margin: 2% 3% ;
+}

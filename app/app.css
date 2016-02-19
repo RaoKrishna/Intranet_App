@@ -41,6 +41,10 @@
   margin: 0;
 }
 
+.well {
+  border-color: green;
+}
+
 .well ul li {
   float: left;
   border: 1px solid #000;
@@ -48,22 +52,59 @@
   margin: 3px 3px 0px 0.1px;
   padding: 5px 5px 0px 5px;
   background-color: #CCC;
-  border-color: darkgray;
+  border-color: green;
   color: #696969;
   cursor: pointer;
 }
 
 #productPlane {
-  border: 1px solid darkgray;
+  border: 1px solid green;
   clear: both;
   padding: 0 1em;
 }
 
 .well .active {
   background-color: #FFF;
-  color: #000;
+  color: green;
+}
+
+.well ul li {
+  color: green;
 }
 
 #prodView {
   margin: 2% 3% ;
+}
+
+.navbar .nav > li {
+  display: inline;
+}
+
+.navbar .nav > li a{
+  color: #00A000;
+}
+
+th, td {
+  color: green;
+}
+
+.label {
+  color: green;
+  font-size: medium;
+  font-weight: normal;
+}
+
+input {
+  width: 100%;
+  /*padding: 1px 1px;*/
+  line-height: 20px;
+}
+
+.productTable {
+  width: 50%;
+  margin: 2% 2%;
+}
+
+.productTable tr td {
+  padding-bottom: 2%;
 }

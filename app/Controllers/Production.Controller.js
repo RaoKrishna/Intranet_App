@@ -29,6 +29,8 @@
             vm.currentTab = tab.url;
         }
 
+
+
         vm.tabs = [
             {
                 title: "View",
@@ -37,6 +39,40 @@
             {
                 title: "Create",
                 url: "Views/CreateEditProduct.html"
+            }
+        ]
+
+        vm.products = [
+            {
+                "id" : 1,
+                "type" : "PP",
+                "name" : "Small Ivory PP"
+            },
+            {
+                "id" : 2,
+                "type" : "ABS",
+                "name" : "Silver Etching Flat Big"
+            },
+            {
+                "id" : 3,
+                "type" : "ABS",
+                "name" : "Silver Double Locking Ring"
+            },
+            {
+                "id" : 4,
+                "type" : "PP",
+                "name" : "Double Locking PP"
+            }
+        ]
+
+        vm.productType = [
+            {
+                name: "PP",
+                value: 1
+            },
+            {
+                name: "ABS",
+                value: 2
             }
         ]
     }

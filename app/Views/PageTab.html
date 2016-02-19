@@ -1,18 +1,18 @@
-<div ng-controller="PageTabController as vm">
-<nav class="navbar navbar-default" >
-    <div class="navbar-collapse">
+<div>
+<nav class="navbar navbar-inverse" >
+    <!--<div class="navbar-collapse">-->
     <ul class="nav navbar-nav">
-        <li ng-class="{active: vm.activeTab =='home'}">
+        <li>
             <a ui-sref="home" ng-click="vm.goTo('home')">Home</a>
         </li>
-        <li ng-class="{active: vm.activeTab =='production'}">
+        <li>
             <a ui-sref="production" ng-click="vm.goTo('production')">Production</a>
         </li>
-        <li ng-class="{active: vm.activeTab =='manufacturing'}">
+        <li>
             <a ui-sref="manufacturing" ng-click="vm.goTo('manufacturing')">Manufacturing</a>
         </li>
     </ul>
-</div>
+<!--</div>-->
 </nav>
 </div>
 <!--<nav class="navbar navbar-default">

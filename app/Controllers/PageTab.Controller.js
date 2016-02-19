@@ -13,18 +13,15 @@
         var vm = this;
         vm.init = init;
         vm.goTo = goTo;
-        vm.name;
         init();
         function init(){
             if(vm.name == null || vm.name == '') {
                 vm.name = 'home';
             }
-            vm.activeTab = vm.name;
         }
 
         function goTo(name){
-            vm.activeTab = name;
-            vm.name = name;
+
             $state.go(name);
 
         }

@@ -1,3 +1,22 @@
-<div id="prodView">
-    <input class="input-sm" ng-model="productSearch" style="width: 100%;" aria-valuetext="Search the products">
+<div id="prodView" ng-controller="ProductionController as vm">
+    <input ng-model="productSearch" placeholder="Search the products">
+    <br/>
+    <br/>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Type</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in vm.products | filter: productSearch">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.type}}</td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>

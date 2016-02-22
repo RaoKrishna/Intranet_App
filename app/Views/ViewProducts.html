@@ -1,4 +1,4 @@
-<div id="prodView" ng-controller="ProductionController as vm">
+<div id="prodView" ng-controller="ProductController as vm">
     <input ng-model="productSearch" placeholder="Search the products">
     <br/>
     <br/>
@@ -12,9 +12,9 @@
         </thead>
         <tbody>
             <tr ng-repeat="product in vm.products | filter: productSearch">
-                <td>{{product.id}}</td>
-                <td>{{product.name}}</td>
-                <td>{{product.type}}</td>
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productType}}</td>
             </tr>
         </tbody>
     </table>

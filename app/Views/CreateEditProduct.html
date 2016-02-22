@@ -1,11 +1,11 @@
-<div ng-controller="ProductionController as vm" xmlns="http://www.w3.org/1999/html">
+<div ng-controller="ProductController as vm" xmlns="http://www.w3.org/1999/html">
     <table class="productTable">
         <tr>
             <td width="20%">
                 <label class="label">Product Name: </label>
             </td>
             <td width="50%">
-                <input ng-model="productName">
+                <input ng-model="vm.product.productName">
             </td>
         </tr>
         <tr>
@@ -13,17 +13,9 @@
                 <label class="label">Product Type: </label>
             </td>
             <td>
-                <select ng-model="productType">
+                <select ng-model="vm.product.productType">
                     <option ng-repeat="type in vm.productType" value="{{type.value}}">{{type.name}}</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label class="label">Transport Charge: </label>
-            </td>
-            <td>
-                <input ng-model="transportCharge">
             </td>
         </tr>
         <tr>
@@ -31,7 +23,7 @@
                 <label class="label">Material Rate: </label>
             </td>
             <td>
-                <input ng-model="materialRate">
+                <input ng-model="vm.product.materialRate">
             </td>
         </tr>
         <tr>
@@ -39,7 +31,7 @@
                 <label class="label">Hours: </label>
             </td>
             <td>
-                <input ng-model="hours">
+                <input ng-model="vm.product.hours">
             </td>
         </tr>
         <tr>
@@ -47,7 +39,7 @@
                 <label class="label">Labour: </label>
             </td>
             <td>
-                <input ng-model="labour">
+                <input ng-model="vm.product.labour">
             </td>
         </tr>
         <tr>
@@ -55,7 +47,7 @@
                 <label class="label">Cavity: </label>
             </td>
             <td>
-                <input ng-model="cavity">
+                <input ng-model="vm.product.cavity">
             </td>
         </tr>
         <tr>
@@ -63,7 +55,7 @@
                 <label class="label">Shots: </label>
             </td>
             <td>
-                <input ng-model="shots">
+                <input ng-model="vm.product.shots">
             </td>
         </tr>
         <tr>
@@ -71,7 +63,15 @@
                 <label class="label">Weight: </label>
             </td>
             <td>
-                <input ng-model="weight">
+                <input ng-model="vm.product.weight">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn-default" ng-click="vm.SaveProduct(vm.product)">Save</button>
+            </td>
+            <td>
+                <button class="btn-default" >Reset</button>
             </td>
         </tr>
 

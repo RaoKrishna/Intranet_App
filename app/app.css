@@ -108,3 +108,6 @@ input {
 .productTable tr td {
   padding-bottom: 2%;
 }
+.navbar-default {
+  background-color: #CCC;
+}

@@ -2,7 +2,7 @@
 
 </div>
 
-<div class="well" ng-controller="ProductionController as vm">
+<div class="well" ng-controller="ProductController as vm">
     <ul>
         <li ng-repeat="tab in vm.tabs" ng-class="{active: vm.isActiveTab(tab.url)}"
             ng-click="vm.tabClick(tab)">{{tab.title}}</li>

@@ -6,19 +6,24 @@
 
     'use strict'
 
-    angular.module('IntranetApp').controller('ProductionController', ProductionController);
+    angular.module('IntranetApp').controller('ProductController', ProductController);
 
-    function ProductionController($scope) {
+    function ProductController($scope, ProductService, $http) {
 
         var vm = this;
         vm.init = init;
         vm.isActiveTab = isActiveTab;
         vm.tabClick = tabClick;
+        vm.product;
+        vm.SaveProduct = SaveProduct;
 
         init();
 
         function init() {
             vm.currentTab = "Views/ViewProducts.html";
+            ProductService.query().then(function(data){
+                vm.products = data;
+            })
         }
 
         function isActiveTab(url){
@@ -29,7 +34,17 @@
             vm.currentTab = tab.url;
         }
 
+        function SaveProduct(product) {
+            if(product.productType == 1) {
+                product.productType = "PP";
+            } else {
+                product.productType = "ABS";
+            }
 
+            ProductService.post(product).then(function(data){
+                console.log('Data inserted successfully');
+            })
+        }
 
         vm.tabs = [
             {
@@ -42,7 +57,7 @@
             }
         ]
 
-        vm.products = [
+        /*vm.products = [
             {
                 "id" : 1,
                 "type" : "PP",
@@ -63,7 +78,7 @@
                 "type" : "PP",
                 "name" : "Double Locking PP"
             }
-        ]
+        ]*/
 
         vm.productType = [
             {

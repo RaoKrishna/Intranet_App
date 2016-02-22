@@ -2,9 +2,10 @@
 
 // Declare app level module which depends on views, and components
 angular.module('IntranetApp', [
-  'ui.router'
+  'ui.router',
+  'ngResource'
 ]).
-config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
   $urlRouterProvider.otherwise('/home');
 
   $stateProvider
@@ -15,7 +16,7 @@ config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRou
       })
       .state('production', {
         url:'/Production',
-        templateUrl: 'Views/Production.html',
+        templateUrl: 'Views/Product.html',
         controller: 'PageTabController'
       })
       .state('manufacturing', {
@@ -24,6 +25,15 @@ config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRou
         controller: 'PageTabController'
       })
 
+    /*$httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];*/
+
+    /*$httpProvider.defaults.useXDomain = true;
+    $httpProvider.defaults.withCredentials = true;
+    delete $httpProvider.defaults.headers.common["X-Requested-With"];
+    $httpProvider.defaults.headers.common["Accept"] = "application/json";
+    $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
+*/
 }]);
 
 /*config(['$routeProvider', function($routeProvider) {

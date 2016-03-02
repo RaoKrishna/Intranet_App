@@ -1,5 +1,67 @@
 /* app css stylesheet */
 
+#mainblock {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    background-color: #ebf4fb;
+}
+
+img {
+  width: 12%;
+  height: 12%;
+  float: left;
+}
+
+.jumbotron {
+  max-height: 12%;
+  margin-left: 12%;
+  margin-bottom: 1%;
+  font-family: Georgia, serif;
+  font-size: 300%;
+  background-color: #ebf4fb;
+  padding-top: 2%;
+  color: #2c699a;
+}
+
+.navbar-default {
+  background-color: #0b274d;
+  margin-bottom: 0%;
+  border-style: hidden;
+  border-radius: 0px;
+}
+
+.childContent {
+    border: 1px solid;
+}
+
+.navbar-product{
+    background-color: #4096dc;
+    margin-bottom: 0%;
+    border-radius: 0px;
+    line-height: 30px;
+    height: 30px;
+    min-height: 0px;
+}
+
+.navbar-product .navbar-nav li a {
+  line-height: 30px;
+  height: 30px;
+  padding-top: 0;
+  min-height: 0px;
+  color: white;
+}
+
+.navbar-product .navbar-nav li {
+    border-right: 1px solid blue;
+}
+
+.well {
+    margin-top: 0%;
+    border: 1px solid;
+    border-radius: 0px;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -29,12 +91,6 @@
   padding: 0;
 }
 
-#mainblock {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 1%;
-}
-
 .well ul {
   list-style: none;
   padding: 0;
@@ -42,7 +98,7 @@
 }
 
 .well {
-  border-color: green;
+  border-color: #2c699a;
 }
 
 .well ul li {
@@ -52,44 +108,59 @@
   margin: 3px 3px 0px 0.1px;
   padding: 5px 5px 0px 5px;
   background-color: #CCC;
-  border-color: green;
+  border-color: #2c699a;
   color: #696969;
   cursor: pointer;
 }
 
 #productPlane {
-  border: 1px solid green;
+  border: 1px solid #2c699a;
   clear: both;
   padding: 0 1em;
 }
 
 .well .active {
   background-color: #FFF;
-  color: green;
+  color: #2c699a;
 }
 
 .well ul li {
-  color: green;
+  color: #2c699a;
 }
 
-#prodView {
-  margin: 2% 3% ;
+.prodView {
+    border: 1px solid #53a0df;
+    padding: 2% 2%;
+    background-color: #ebf4fb;
 }
 
 .navbar .nav > li {
   display: inline;
 }
 
-.navbar .nav > li a{
-  color: #00A000;
+.navbar-default .nav li {
+    border-right: 1px solid #204b6e;
+    width: 150px;
+}
+
+.navbar-default .nav > li a{
+  color: white;
+  align-content: center;
+    padding: 15% 0% 15% 15%;
+
+}
+
+.navbar .nav > li a:hover {
+    color: #00ffff;
+    background-color: transparent;
 }
 
 th, td {
-  color: green;
+  color: #2c699a;
 }
 
 .label {
-  color: green;
+  color: #2c699a;
   font-size: medium;
   font-weight: normal;
 }
@@ -108,6 +179,4 @@ input {
 .productTable tr td {
   padding-bottom: 2%;
 }
-.navbar-default {
-  background-color: #CCC;
-}
+

@@ -1,3 +1,43 @@
+<div ng-include="'Views/PageTab.html'"></div>
+
+<div>
+    <div class="navbar navbar-product" ng-controller="ProductController as vm">
+        <ul class="nav navbar-nav">
+            <li ng-class="{active: vm.isActive('viewproducts')}">
+                <a ui-sref="viewproducts" ng-click="vm.goTo('home')">View</a>
+            </li>
+            <li>
+                <a ui-sref="createproduct" ng-click="vm.goTo('production')">Create</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="prodView" ng-controller="ViewProductsController as vm">
+        <input ng-model="productSearch" placeholder="Search the products">
+        <br/>
+        <br/>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="product in vm.products | filter: productSearch">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productType}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+<!--
 <div id="prodView" ng-controller="ProductController as vm">
     <input ng-model="productSearch" placeholder="Search the products">
     <br/>
@@ -19,4 +59,4 @@
         </tbody>
     </table>
 
-</div>
+</div>-->

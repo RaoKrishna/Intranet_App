@@ -11,18 +11,23 @@ config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($state
   $stateProvider
       .state('home', {
         url:'/home',
-        templateUrl: 'Views/Homepage.html',
-        controller: 'PageTabController'
+        templateUrl: 'Views/Homepage.html'
       })
       .state('production', {
-        url:'/Production',
-        templateUrl: 'Views/Product.html',
-        controller: 'PageTabController'
+        url:'/Production/:activemodule',
+        templateUrl: 'Views/ViewProducts.html'
       })
       .state('manufacturing', {
         url:'/Manufacturing',
-        templateUrl: 'Views/Manufacturing.html',
-        controller: 'PageTabController'
+        templateUrl: 'Views/Manufacturing.html'
+      })
+      .state('createproduct', {
+          url:'/CreateProduct',
+          templateUrl: 'Views/CreateEditProduct.html'
+      })
+      .state('viewproducts', {
+          url:'/ViewProduct',
+          templateUrl: 'Views/ViewProducts.html'
       })
 
     /*$httpProvider.defaults.useXDomain = true;

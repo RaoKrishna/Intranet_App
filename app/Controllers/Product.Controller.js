@@ -8,7 +8,7 @@
 
     angular.module('IntranetApp').controller('ProductController', ProductController);
 
-    function ProductController($scope, ProductService, $http) {
+    function ProductController($scope, ProductService, $http, ObjectStatesService, $state) {
 
         var vm = this;
         vm.init = init;
@@ -16,14 +16,19 @@
         vm.tabClick = tabClick;
         vm.product;
         vm.SaveProduct = SaveProduct;
+        vm.isActive = isActive;
+        vm.currentTab = "Views/ViewProducts.html";
 
         init();
+        //init();
 
         function init() {
-            vm.currentTab = "Views/ViewProducts.html";
-            ProductService.query().then(function(data){
-                vm.products = data;
-            })
+            //vm.products = ObjectStatesService.fetchProducts();
+            //vm.productType = ObjectStatesService.fetchProductTypes();
+        }
+
+        function isActive(module) {
+            return module === $state.params.activemodule;
         }
 
         function isActiveTab(url){
@@ -35,13 +40,19 @@
         }
 
         function SaveProduct(product) {
-            if(product.productType == 1) {
+
+            if(product.productTypeID == 1) {
                 product.productType = "PP";
             } else {
                 product.productType = "ABS";
             }
 
-            ProductService.post(product).then(function(data){
+            var newProduct = {
+                productName: "Ksr",
+                hours: 10
+            };
+
+            ProductService.post(vm.product).then(function(data){
                 console.log('Data inserted successfully');
             })
         }
@@ -80,15 +91,5 @@
             }
         ]*/
 
-        vm.productType = [
-            {
-                name: "PP",
-                value: 1
-            },
-            {
-                name: "ABS",
-                value: 2
-            }
-        ]
     }
 })();

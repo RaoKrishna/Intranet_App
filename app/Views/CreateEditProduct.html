@@ -1,4 +1,17 @@
-<div ng-controller="ProductController as vm" xmlns="http://www.w3.org/1999/html">
+<div ng-include="'Views/PageTab.html'"></div>
+
+<div class="navbar navbar-product" ng-controller="ProductController as vm">
+    <ul class="nav navbar-nav">
+        <li ng-class="{active: vm.isActive('viewproducts')}">
+            <a ui-sref="viewproducts" ng-click="vm.goTo('home')">View</a>
+        </li>
+        <li>
+            <a ui-sref="createproduct" ng-click="vm.goTo('production')">Create</a>
+        </li>
+    </ul>
+</div>
+
+<div class="prodView" ng-controller="CreateEditProductsController as vm" xmlns="http://www.w3.org/1999/html">
     <table class="productTable">
         <tr>
             <td width="20%">
@@ -13,8 +26,8 @@
                 <label class="label">Product Type: </label>
             </td>
             <td>
-                <select ng-model="vm.product.productType">
-                    <option ng-repeat="type in vm.productType" value="{{type.value}}">{{type.name}}</option>
+                <select ng-model="vm.selectedType" ng-options="type.productTypeID as type.productTypeName for type in vm.productType">
+                    <!--<option ng-repeat="type in vm.productType" value="{{type.productTypeID}}" selected={{vm.productType[0]}}>{{type.productTypeName}}</option>-->
                 </select>
             </td>
         </tr>
@@ -68,7 +81,7 @@
         </tr>
         <tr>
             <td>
-                <button class="btn-default" ng-click="vm.SaveProduct(vm.product)">Save</button>
+                <button class="btn-default" ng-click="vm.SaveProduct(vm.product, vm.selectedType)">Save</button>
             </td>
             <td>
                 <button class="btn-default" >Reset</button>

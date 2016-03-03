@@ -1,6 +1,99 @@
-<div ng-include="'Views/PageTab.html'" >
+<div ng-include="'Views/PageTab.html'"></div>
 
-</div>
-<div class="jumbotron">
-    This is Manufacturing
+<div ng-controller="ManufactureController as vm" class="prodView">
+    <label class="label">Select the product: </label>
+    <select ng-model="vm.selectedProduct" ng-options="product.productId as product.productName for product in vm.products" ng-change="vm.selectProduct()">
+    </select>
+    <div ng-show="vm.showExpectedOutput">
+        <label class="expectLabel">Expected Output: </label>
+        <table class="manufactureTable">
+            <tr>
+                <td width="10%">
+                    <label class="label">Shots: </label>
+                </td>
+                <td width="15%">
+                    {{vm.product.shots}}
+                </td>
+                <td width="15%">
+                    <label class="label">Per day shot: </label>
+                </td>
+                <td width="15%">
+                    {{vm.perDayShot}}
+                </td>
+                <td width="10%">
+                    <label class="label">Material Rate: </label>
+                </td>
+                <td width="15%">
+                    {{vm.product.materialRate}}
+                </td>
+                <td width="15%">
+                    <label class="label">Material cost per piece: </label>
+                </td>
+                <td width="5%">
+                    {{vm.matCostPerPiece}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="label">Hours: </label>
+                </td>
+                <td>
+                    {{vm.product.hours}}
+                </td>
+                <td>
+                    <label class="label">Per day output: </label>
+                </td>
+                <td>
+                    {{vm.perDayOutput}}
+                </td>
+                <td>
+                    <label class="label">Labour: </label>
+                </td>
+                <td>
+                    {{vm.product.labour}}
+                </td>
+                <td>
+                    <label class="label">Labour cost per piece: </label>
+                </td>
+                <td>
+                    {{vm.labCostPerPiece}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="label">Cavity: </label>
+                </td>
+                <td>
+                    {{vm.product.cavity}}
+                </td>
+                <td>
+                    <label class="label">Weight per day: </label>
+                </td>
+                <td>
+                    {{vm.weightPerDay}}
+                </td>
+                <td>
+                    <label class="label"></label>
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <label class="label">Total cost per piece: </label>
+                </td>
+                <td>
+                    {{vm.totalCostPerPiece}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="label">Weight: </label>
+                </td>
+                <td>
+                    {{vm.product.weight}}
+                </td>
+            </tr>
+        </table>
+        <label class="expectLabel">Enter the manufacturing details: </label>
+    </div>
 </div>

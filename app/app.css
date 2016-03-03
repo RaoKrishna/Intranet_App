@@ -29,10 +29,23 @@ img {
   margin-bottom: 0%;
   border-style: hidden;
   border-radius: 0px;
+  line-height: 40px;
+  height: 40px;
+  min-height: 0px;
 }
 
-.childContent {
-    border: 1px solid;
+.navbar-default .nav li {
+    border-right: 1px solid #204b6e;
+    width: 150px;
+}
+
+.navbar-default .nav li a{
+    color: white;
+    align-content: center;
+    padding: 0% 0% 15% 25%;
+    line-height: 40px;
+    height: 40px;
+    min-height: 0px;
 }
 
 .navbar-product{
@@ -52,80 +65,18 @@ img {
   color: white;
 }
 
+.childContent {
+    border: 1px solid;
+}
+
 .navbar-product .navbar-nav li {
     border-right: 1px solid blue;
-}
-
-.well {
-    margin-top: 0%;
-    border: 1px solid;
-    border-radius: 0px;
-}
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-.well ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.well {
-  border-color: #2c699a;
-}
-
-.well ul li {
-  float: left;
-  border: 1px solid #000;
-  border-bottom-width: 0;
-  margin: 3px 3px 0px 0.1px;
-  padding: 5px 5px 0px 5px;
-  background-color: #CCC;
-  border-color: #2c699a;
-  color: #696969;
-  cursor: pointer;
 }
 
 #productPlane {
   border: 1px solid #2c699a;
   clear: both;
   padding: 0 1em;
-}
-
-.well .active {
-  background-color: #FFF;
-  color: #2c699a;
-}
-
-.well ul li {
-  color: #2c699a;
 }
 
 .prodView {
@@ -136,18 +87,6 @@ img {
 
 .navbar .nav > li {
   display: inline;
-}
-
-.navbar-default .nav li {
-    border-right: 1px solid #204b6e;
-    width: 150px;
-}
-
-.navbar-default .nav > li a{
-  color: white;
-  align-content: center;
-    padding: 15% 0% 15% 15%;
-
 }
 
 .navbar .nav > li a:hover {
@@ -165,10 +104,19 @@ th, td {
   font-weight: normal;
 }
 
+.expectLabel {
+    color: #2c699a;
+    font-size: medium;
+    font-weight: bold;
+    margin: 2% 0%;
+    padding-left: 1%;
+}
+
 input {
   width: 100%;
   /*padding: 1px 1px;*/
-  line-height: 20px;
+  line-height: 25px;
+  border: 1px solid #53a0df;
 }
 
 .productTable {
@@ -179,4 +127,17 @@ input {
 .productTable tr td {
   padding-bottom: 2%;
 }
+
+.manufactureTable {
+    width: 100%;
+}
+
+.manufactureTable tr td {
+    padding-bottom: 1%;
+}
+
+.table {
+    margin-bottom: 0%;
+}
+
 

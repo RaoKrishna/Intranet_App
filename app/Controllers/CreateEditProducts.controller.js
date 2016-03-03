@@ -8,7 +8,7 @@
 
     angular.module('IntranetApp').controller('CreateEditProductsController', CreateEditProductsController);
 
-    function CreateEditProductsController($scope, ProductService, $http, ObjectStatesService, $stateParams) {
+    function CreateEditProductsController($scope, ProductService, $http, ObjectStatesService, $stateParams, $state) {
 
         var vm = this;
         vm.init = init;
@@ -19,7 +19,7 @@
         init();
 
         function init() {
-            vm.productType = ObjectStatesService.fetchProductTypes();
+            //vm.productType = ObjectStatesService.fetchProductTypes();
             ObjectStatesService.fetchProductTypes().then(function(productTypeList){
                 vm.productType = productTypeList;
                 vm.selectedType = productTypeList[0].productTypeID;

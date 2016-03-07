@@ -14,7 +14,7 @@
 
         function fetchProducts() {
             if(productList.length == 0) {
-                return $http.get('http://localhost:5669/api/product/')
+                return $http.get('http://localhost/IntranetAPI/api/product/')
                     .then(function(response){
                         productList = response.data;
                         return response.data;
